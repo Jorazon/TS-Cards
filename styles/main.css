@@ -1,0 +1,33 @@
+* {
+	margin: 0;
+	backface-visibility: hidden;
+}
+
+body {
+	background: rgb(25, 100, 60);
+}
+
+#table {
+	display: flex;
+	flex-flow: row wrap;
+	gap: 0.2em;
+}
+
+.card {
+	position: relative;
+	transition: all 2s linear;
+	transform-style: preserve-3d;
+}
+
+.card::after {
+	font-size: 0px;
+	z-index: -1;
+	content: "";
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background: url("../cards/red.svg") no-repeat;
+	transform: rotateY(180deg);
+}
